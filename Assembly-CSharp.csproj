@@ -57,6 +57,8 @@
      <Compile Include="Assets\PowerUp\Scripts\ScaleParticles.cs" />
      <Compile Include="Assets\PowerUp\Scripts\TakeablePowerUp.cs" />
      <Compile Include="Assets\PowerUp\Scripts\Utility\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Arrow.cs" />
+     <Compile Include="Assets\Scripts\ArrowManager.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
