@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowManager : MonoBehaviour {
+
 	public static ArrowManager Instance;
 
 	public SteamVR_TrackedObject trackedObj;
@@ -25,16 +26,17 @@ public class ArrowManager : MonoBehaviour {
 	void OnDestroy() {
 		if (Instance == this)
 			Instance = null;
-	}
+	} 
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+
+	void Update() {
 		AttachArrow ();
-		PullString ();
+		//PullString ();
 	}
 
 	private void PullString() {
@@ -44,15 +46,16 @@ public class ArrowManager : MonoBehaviour {
 
 			var device = SteamVR_Controller.Input((int)trackedObj.index);
 			if (device.GetTouchUp (SteamVR_Controller.ButtonMask.Trigger)) {
-				Shoot ();
+		//Fire ();
 			}
 		}
-	}
-	private void Shoot() {
+	}  
+
+	/*	private void Fire() {
 		float dist = (stringStartPoint.transform.position - trackedObj.transform.position).magnitude;
 
 		currentArrow.transform.parent = null;
-		currentArrow.GetComponent<Arrow>().Shot ();
+		currentArrow.GetComponent<Arrow> ().Fired ();
 
 		Rigidbody r = currentArrow.GetComponent<Rigidbody> ();
 		r.velocity = currentArrow.transform.forward * 25f * dist;
@@ -64,13 +67,13 @@ public class ArrowManager : MonoBehaviour {
 
 		currentArrow = null;
 		isAttached = false;
-	}
+	}*/
 
 	private void AttachArrow() {
 		if (currentArrow == null) {
 			currentArrow = Instantiate (arrowPrefab);
 			currentArrow.transform.parent = trackedObj.transform;
-			currentArrow.transform.localPosition = new Vector3 (0f, 0f, .75f);
+			currentArrow.transform.localPosition = new Vector3 (0f, 0f, .6f);
 			currentArrow.transform.localRotation = Quaternion.identity;
 		}
 	}
@@ -81,6 +84,5 @@ public class ArrowManager : MonoBehaviour {
 		currentArrow.transform.rotation = arrowStartPoint.transform.rotation;
 
 		isAttached = true;
-	}
-
+	} 
 }
