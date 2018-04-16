@@ -16,7 +16,7 @@ public class Arrow : MonoBehaviour {
 		AttachArrow ();
 	}
 
-	/*void Update() {
+	void Update() {
 		if (isFired && transform.GetComponent<Rigidbody> ().velocity.magnitude > 5f) {
 			transform.LookAt (transform.position + transform.GetComponent<Rigidbody> ().velocity);
 		}
@@ -25,7 +25,7 @@ public class Arrow : MonoBehaviour {
 	public void Fired() {
 		isFired =  true; 
 	}
-	*/
+
 	private void AttachArrow() {
 		var device = SteamVR_Controller.Input((int)ArrowManager.Instance.trackedObj.index);
 		if (!isAttached && device.GetTouch (SteamVR_Controller.ButtonMask.Trigger)) {

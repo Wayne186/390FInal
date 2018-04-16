@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System;
 
 public class ArrowManager : MonoBehaviour {
 
@@ -36,44 +35,46 @@ public class ArrowManager : MonoBehaviour {
 
 	void Update() {
 		AttachArrow ();
-		//PullString ();
+		PullString ();
 	}
 
 	private void PullString() {
 		if (isAttached) {
 			float dist = (stringStartPoint.transform.position - trackedObj.transform.position).magnitude;
-			stringAttachPoint.transform.localPosition = stringStartPoint.transform.localPosition  + new Vector3 (5f* dist, 0f, 0f);
+			Debug.LogError (dist);
+		/*	dist = (float)Math.Exp ((double)(dist-1));
+			Debug.LogError ("after expo :" + dist);*/
+			stringAttachPoint.transform.localPosition = stringStartPoint.transform.localPosition  + new Vector3 (5f*dist, 0f, 0f);
 
 			var device = SteamVR_Controller.Input((int)trackedObj.index);
 			if (device.GetTouchUp (SteamVR_Controller.ButtonMask.Trigger)) {
-		//Fire ();
+		      Fire ();
 			}
 		}
 	}  
 
-	/*	private void Fire() {
+		private void Fire() {
 		float dist = (stringStartPoint.transform.position - trackedObj.transform.position).magnitude;
 
 		currentArrow.transform.parent = null;
 		currentArrow.GetComponent<Arrow> ().Fired ();
 
 		Rigidbody r = currentArrow.GetComponent<Rigidbody> ();
-		r.velocity = currentArrow.transform.forward * 25f * dist;
+		r.velocity = currentArrow.transform.forward * 30f * dist;
 		r.useGravity = true;
 
 		currentArrow.GetComponent<Collider> ().isTrigger = false;
 
 		stringAttachPoint.transform.position = stringStartPoint.transform.position;
-
 		currentArrow = null;
 		isAttached = false;
-	}*/
+	}
 
 	private void AttachArrow() {
 		if (currentArrow == null) {
 			currentArrow = Instantiate (arrowPrefab);
 			currentArrow.transform.parent = trackedObj.transform;
-			currentArrow.transform.localPosition = new Vector3 (0f, 0f, .6f);
+			currentArrow.transform.localPosition = new Vector3 (0f, 0f, 0.6f);
 			currentArrow.transform.localRotation = Quaternion.identity;
 		}
 	}
