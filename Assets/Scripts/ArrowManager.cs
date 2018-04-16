@@ -41,8 +41,8 @@ public class ArrowManager : MonoBehaviour {
 	private void PullString() {
 		if (isAttached) {
 			float dist = (stringStartPoint.transform.position - trackedObj.transform.position).magnitude;
-			Debug.LogError (dist);
-		/*	dist = (float)Math.Exp ((double)(dist-1));
+			/*Debug.LogError (dist);
+			dist = (float)Math.Exp ((double)(dist-1));
 			Debug.LogError ("after expo :" + dist);*/
 			stringAttachPoint.transform.localPosition = stringStartPoint.transform.localPosition  + new Vector3 (5f*dist, 0f, 0f);
 
