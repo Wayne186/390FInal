@@ -60,7 +60,7 @@ public class ArrowManager : MonoBehaviour {
 		currentArrow.GetComponent<Arrow> ().Fired ();
 
 		Rigidbody r = currentArrow.GetComponent<Rigidbody> ();
-		r.velocity = currentArrow.transform.forward * 30f * dist;
+		r.velocity = currentArrow.transform.forward * 60f * dist*2;
 		r.useGravity = true;
 
 		currentArrow.GetComponent<Collider> ().isTrigger = false;
