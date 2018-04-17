@@ -20,6 +20,7 @@ public class ArrowManager : MonoBehaviour {
 	void Awake() {
 		if (Instance == null)
 			Instance = this;
+		GetComponent<StaffManager> ().enabled = false;
 	}
 
 	void OnDestroy() {

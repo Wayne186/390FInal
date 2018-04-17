@@ -7,6 +7,7 @@ TagManager:
   - BarrelTrap
   - Fire
   - Arrow
+  - Longbow
   layers:
   - Default
   - TransparentFX
