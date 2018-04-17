@@ -7,10 +7,11 @@ public class CastleHealth : MonoBehaviour {
 	public float CurrentHealth { get; set;}
 	public float MaxHealth { get; set; }
 	public Slider CastleHealthBar;
+	private string enemy;
 
 	// Use this for initialization
 	void Start () {
-		MaxHealth = 200f;
+		MaxHealth = 160f;
 		CurrentHealth = MaxHealth;
 		CastleHealthBar.value = CalculateHealth ();
 	}
@@ -20,6 +21,33 @@ public class CastleHealth : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.K)) {
 			DealDamage (2);
 		}
+	}
+
+	//Castle Attacked
+	void OnTriggerStay(Collider collider){
+		if (!collider.CompareTag ("Arrow")) {
+			return;
+		}else if (collider.CompareTag("Enemy1")){
+			DealDamage (1);
+			StartCoroutine (timer ());
+
+		}else if (collider.CompareTag("Enemy2")){
+			DealDamage (2);
+			StartCoroutine (timer ());
+
+		}else if (collider.CompareTag("Enemy3")){
+			DealDamage (5);
+			StartCoroutine (timer ());
+
+		}else{
+			DealDamage (10);
+			StartCoroutine (timer ());
+		}
+
+	}
+
+	private IEnumerator timer(){
+		yield return new WaitForSeconds (1);
 	}
 
 	void DealDamage(float damageValue){
@@ -35,6 +63,6 @@ public class CastleHealth : MonoBehaviour {
 	}
 	void GameOver(){
 		CurrentHealth = 0;
-		Debug.Log ("Suohi Legion Took Over the Castle....You're a SUOHI footman now.");
+		Debug.Log ("Suohi Legion Took Over the Castle....You're now a SUOHI FOOTMAN.");
 	}
 }
