@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PointManager : MonoBehaviour {
-	public float CurrentPoint { get; set;}
-	public float MaxPoint { get; set; }
+	public static float CurrentPoint { get; set;}
+	public static float MaxPoint { get; set; }
 	public Slider PointBar;
 
 	// Use this for initialization
@@ -21,7 +21,7 @@ public class PointManager : MonoBehaviour {
 		}
 	}
 
-	void GainPoints(float gainValue){
+	public void GainPoints(float gainValue){
 		CurrentPoint += gainValue;
 		PointBar.value = CalculatePoint ();
 		if (CurrentPoint == MaxPoint) {

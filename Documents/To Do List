@@ -1,7 +1,20 @@
-如何换Weapon?
+﻿如何换Weapon?
 Points 进度条
 Castle HP 进度条 
-Emit Particle
-Emit Point/HP Animation
+Emit Particle 
+Emit Point
+Barrel Damage 
+Headshot/Body Collider 
+HP Animation
 Pause Menu
 Sound Effects
+
+J:
+1. Particle (Explosion) DONE
+2. Staff (Point System)
+3. Barrel
+
+W:
+1. Route
+2. HP Mesh Collider (HP Animation)
+3. Paticle

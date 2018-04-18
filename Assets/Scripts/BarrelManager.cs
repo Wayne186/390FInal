@@ -27,7 +27,7 @@ public class BarrelManager : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider collider){
-		Debug.LogError ("entering barrel trap");
+//		Debug.LogError ("entering barrel trap");
 		if (!collider.CompareTag ("Arrow")) {
 			return;
 		} else {

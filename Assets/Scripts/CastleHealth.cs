@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CastleHealth : MonoBehaviour {
-	public float CurrentHealth { get; set;}
-	public float MaxHealth { get; set; }
+	public static float CurrentHealth { get; set;}
+	public static float MaxHealth { get; set; }
 	public Slider CastleHealthBar;
 	private string enemy;
 
@@ -43,19 +43,24 @@ public class CastleHealth : MonoBehaviour {
 			DealDamage (10);
 			StartCoroutine (timer ());
 		}
-
 	}
 
 	private IEnumerator timer(){
 		yield return new WaitForSeconds (1);
 	}
 
-	void DealDamage(float damageValue){
+	public void DealDamage(float damageValue){
 		CurrentHealth -= damageValue;
 		CastleHealthBar.value = CalculateHealth ();
 		if (CurrentHealth <= 0) {
 			GameOver ();
 		}
+	}
+
+	public void GainHealth(float gainValue){
+		Debug.Log ("Gaining Health: " + CurrentHealth);
+		CurrentHealth += gainValue;
+		CastleHealthBar.value = CalculateHealth ();
 	}
 
 	float CalculateHealth(){

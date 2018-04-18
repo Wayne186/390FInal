@@ -8,6 +8,8 @@ TagManager:
   - Fire
   - Arrow
   - Longbow
+  - HealthParticle
+  - ParticleAudio
   layers:
   - Default
   - TransparentFX
