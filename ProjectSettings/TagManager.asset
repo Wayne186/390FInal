@@ -12,6 +12,7 @@ TagManager:
   - ParticleAudio
   - Gate
   - TrapCollider
+  - TrapColliderGate
   layers:
   - Default
   - TransparentFX

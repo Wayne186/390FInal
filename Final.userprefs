@@ -4,13 +4,13 @@
     <Files>
       <File FileName="Assets\Scripts\ArrowManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\StaffManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HealthParticle.cs" Line="19" Column="4" />
+      <File FileName="Assets\Scripts\HealthParticle.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PointParticle.cs" Line="35" Column="2" />
-      <File FileName="Assets\Scripts\CastleHealth.cs" Line="16" Column="2" />
-      <File FileName="Assets\Scripts\PointBarManager.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\PointManager.cs" Line="19" Column="40" />
-      <File FileName="Assets\Scripts\BarrelActivated.cs" Line="25" Column="27" />
+      <File FileName="Assets\Scripts\CastleHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PointBarManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PointManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BarrelManager.cs" Line="5" Column="14" />
+      <File FileName="Assets\Scripts\BarrelActivated.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

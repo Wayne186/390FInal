@@ -7,6 +7,7 @@ public class BarrelManager : MonoBehaviour {
 	public List<GameObject> barrels;
 	public Transform Trap;
 	public GameObject Parent;
+	public GameObject BarrelActivator;
 	public AudioClip FireBarrel;
 	public AudioSource Explosion;
 
@@ -43,7 +44,7 @@ public class BarrelManager : MonoBehaviour {
 		}
 		yield return new WaitForSeconds (1);
 		explosionLauncher.Stop ();
-		BarrelActivated.Activated ();
+		BarrelActivated.Activated (BarrelActivator);
 		Destroy (Parent);
 	}
 }
