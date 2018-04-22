@@ -10,6 +10,8 @@ TagManager:
   - Longbow
   - HealthParticle
   - ParticleAudio
+  - Gate
+  - TrapCollider
   layers:
   - Default
   - TransparentFX

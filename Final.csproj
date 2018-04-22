@@ -100,8 +100,11 @@
     <Compile Include="Assets\Scripts\ArrowManager.cs" />
     <Compile Include="Assets\Scripts\BarrelManager.cs" />
     <Compile Include="Assets\Scripts\CastleHealth.cs" />
+    <Compile Include="Assets\Scripts\HealthParticle.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
+    <Compile Include="Assets\Scripts\ParticleMovement.cs" />
     <Compile Include="Assets\Scripts\PointManager.cs" />
+    <Compile Include="Assets\Scripts\PointParticle.cs" />
     <Compile Include="Assets\Scripts\StaffManager.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />

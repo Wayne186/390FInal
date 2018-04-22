@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CastleHealth : MonoBehaviour {
-	public static float CurrentHealth { get; set;}
-	public static float MaxHealth { get; set; }
-	public Slider CastleHealthBar;
-	private string enemy;
+
+	public class HealthManager{
+		public float CurrentHealth;
+		public HealthManager(float health){
+			CurrentHealth = health;
+		}
+	}
+
+	private static float MaxHealth;
+	public static HealthManager myHealth;
 
 	// Use this for initialization
 	void Start () {
-		MaxHealth = 160f;
-		CurrentHealth = MaxHealth;
-		CastleHealthBar.value = CalculateHealth ();
+		MaxHealth = 100f;
+		myHealth = new HealthManager(MaxHealth);
 	}
 	
 	// Update is called once per frame
@@ -28,19 +32,19 @@ public class CastleHealth : MonoBehaviour {
 		if (!collider.CompareTag ("Arrow")) {
 			return;
 		}else if (collider.CompareTag("Enemy1")){
-			DealDamage (1);
+			DealDamage (1f);
 			StartCoroutine (timer ());
 
 		}else if (collider.CompareTag("Enemy2")){
-			DealDamage (2);
+			DealDamage (2f);
 			StartCoroutine (timer ());
 
 		}else if (collider.CompareTag("Enemy3")){
-			DealDamage (5);
+			DealDamage (5f);
 			StartCoroutine (timer ());
 
 		}else{
-			DealDamage (10);
+			DealDamage (10f);
 			StartCoroutine (timer ());
 		}
 	}
@@ -49,25 +53,24 @@ public class CastleHealth : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 	}
 
-	public void DealDamage(float damageValue){
-		CurrentHealth -= damageValue;
-		CastleHealthBar.value = CalculateHealth ();
-		if (CurrentHealth <= 0) {
+	public static void DealDamage(float damageValue){
+		myHealth.CurrentHealth -= damageValue;
+		if (myHealth.CurrentHealth <= 0) {
 			GameOver ();
 		}
+		Debug.Log ("Losing Health: " + myHealth.CurrentHealth);
 	}
 
-	public void GainHealth(float gainValue){
-		Debug.Log ("Gaining Health: " + CurrentHealth);
-		CurrentHealth += gainValue;
-		CastleHealthBar.value = CalculateHealth ();
+	public static void GainHealth(float gainValue){
+		myHealth.CurrentHealth += gainValue;
+		Debug.Log ("Gaining Health: " + myHealth.CurrentHealth);
 	}
 
-	float CalculateHealth(){
-		return CurrentHealth / MaxHealth;
+	public static float CalculateHealth(){
+		return myHealth.CurrentHealth / MaxHealth;
 	}
-	void GameOver(){
-		CurrentHealth = 0;
+	private static void GameOver(){
+		myHealth.CurrentHealth = 0;
 		Debug.Log ("Suohi Legion Took Over the Castle....You're now a SUOHI FOOTMAN.");
 	}
 }

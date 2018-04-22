@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthParticle : MonoBehaviour {
-	//public ParticleSystem explosionLauncher;
 	public List<GameObject> particleChildren;
 	public Transform Emission;
 	public GameObject Parent;
 	GameObject healthObject;
 	public AudioSource Shoot;
 	public float hp;
-	CastleHealth healthManager;
 
 	// Use this for initialization
 	void Start () {
@@ -19,14 +17,12 @@ public class HealthParticle : MonoBehaviour {
 				particleChildren.Add (child.gameObject);
 			} 
 		}
-		healthManager = GetComponent<CastleHealth> ();
-		hp = 2;
-
+		hp = 2f;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		haha ();
+		//haha ();
 	}
 
 	void OnTriggerEnter(Collider collider){
@@ -34,7 +30,6 @@ public class HealthParticle : MonoBehaviour {
 		if (!collider.CompareTag ("Arrow")) {
 			return;
 		} else {
-			//healthManager.GainHealth (hp);
 			StartCoroutine (timer ());
 		}
 	}
@@ -43,7 +38,7 @@ public class HealthParticle : MonoBehaviour {
 	}
 
 	private IEnumerator timer(){
-//		healthManager.GainHealth (hp);
+		CastleHealth.GainHealth (hp);
 		foreach (GameObject particle in particleChildren) {
 			Destroy (particle);
 		}

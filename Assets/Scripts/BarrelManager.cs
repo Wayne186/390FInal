@@ -43,6 +43,7 @@ public class BarrelManager : MonoBehaviour {
 		}
 		yield return new WaitForSeconds (1);
 		explosionLauncher.Stop ();
+		BarrelActivated.Activated ();
 		Destroy (Parent);
 	}
 }

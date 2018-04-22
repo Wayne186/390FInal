@@ -18,13 +18,10 @@ public class PointParticle : MonoBehaviour {
 				particleChildren.Add(child.gameObject);
 			}
 		}
-		//pointManager = new PointManager ();
-		point = 1;
 	}
 
 	// Update is called once per frame
 	void Update () {
-
 	}
 
 	void OnTriggerEnter(Collider collider){
@@ -32,16 +29,16 @@ public class PointParticle : MonoBehaviour {
 		if (!collider.CompareTag ("Arrow")) {
 			return;
 		} else {
-			//pointManager.GainPoints (point);
 			StartCoroutine (timer ());
 		}
 	}
 
 	private IEnumerator timer(){
+		PointManager.GainPoints (point);
 		foreach (GameObject particle in particleChildren) {
 			Destroy (particle);
 		}
-		Shoot.Play ();
+		Shoot.Play();
 		yield return new WaitForSeconds (2);
 		Destroy (Parent);
 	}
