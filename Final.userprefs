@@ -1,16 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BarrelActivated.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu\QuitManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\ArrowManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\StaffManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HealthParticle.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PointParticle.cs" Line="35" Column="2" />
-      <File FileName="Assets\Scripts\CastleHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PointBarManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PointManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BarrelManager.cs" Line="5" Column="14" />
-      <File FileName="Assets\Scripts\BarrelActivated.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\Arrow.cs" Line="33" Column="3" />
+      <File FileName="Assets\Scripts\Monsters\Wave.cs" Line="19" Column="27" />
+      <File FileName="Assets\Scripts\Managers\SpawnManager.cs" Line="44" Column="24" />
+      <File FileName="Assets\Scripts\ParticleMovement.cs" Line="16" Column="1" />
+      <File FileName="Assets\Scripts\Menu\PlayManager.cs" Line="11" Column="3" />
+      <File FileName="Assets\Scripts\Menu\QuitManager.cs" Line="9" Column="17" />
+      <File FileName="Assets\Scripts\Menu\HelpManager.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

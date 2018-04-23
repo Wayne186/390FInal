@@ -13,6 +13,12 @@ TagManager:
   - Gate
   - TrapCollider
   - TrapColliderGate
+  - Attack
+  - Enemy
+  - Body
+  - Head
+  - Managers
+  - portbase
   layers:
   - Default
   - TransparentFX

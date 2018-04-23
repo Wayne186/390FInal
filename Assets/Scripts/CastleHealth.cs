@@ -16,37 +16,15 @@ public class CastleHealth : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		MaxHealth = 100f;
+		MaxHealth = 360f;
 		myHealth = new HealthManager(MaxHealth);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.K)) {
+		/*if (Input.GetKeyDown (KeyCode.K)) {
 			DealDamage (2);
-		}
-	}
-
-	//Castle Attacked
-	void OnTriggerStay(Collider collider){
-		if (!collider.CompareTag ("Arrow")) {
-			return;
-		}else if (collider.CompareTag("Enemy1")){
-			DealDamage (1f);
-			StartCoroutine (timer ());
-
-		}else if (collider.CompareTag("Enemy2")){
-			DealDamage (2f);
-			StartCoroutine (timer ());
-
-		}else if (collider.CompareTag("Enemy3")){
-			DealDamage (5f);
-			StartCoroutine (timer ());
-
-		}else{
-			DealDamage (10f);
-			StartCoroutine (timer ());
-		}
+		}*/
 	}
 
 	private IEnumerator timer(){

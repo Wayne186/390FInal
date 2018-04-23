@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 1931375617798352}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 8.100906, y: -6.2198296, z: 0.079711914}
-  m_LocalScale: {x: 1.122227, y: 0.8417157, z: 1.1222271}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4696180485487592}
   - {fileID: 4746332933517778}
@@ -512,8 +512,7 @@ MonoBehaviour:
   particleChildren: []
   Emission: {fileID: 4916967312802248}
   Parent: {fileID: 1931375617798352}
-  Shoot: {fileID: 82111528424380572}
-  point: 60
+  Shot: {fileID: 82111528424380572}
 --- !u!114 &114425590647597528
 MonoBehaviour:
   m_ObjectHideFlags: 1

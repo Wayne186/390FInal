@@ -20,9 +20,9 @@ public class PointManager : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.P)) {
+		/*if (Input.GetKeyDown (KeyCode.P)) {
 			GainPoints (2);
-		}
+		}*/
 	}
 
 	public static void GainPoints(float gainValue){

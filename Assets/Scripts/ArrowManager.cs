@@ -8,11 +8,9 @@ public class ArrowManager : MonoBehaviour {
 	public SteamVR_TrackedObject trackedObj;
 
 	private GameObject currentArrow;
-
 	public GameObject stringAttachPoint;
 	public GameObject arrowStartPoint;
 	public GameObject stringStartPoint;
-
 	public GameObject arrowPrefab;
 
 	private bool isAttached = false;

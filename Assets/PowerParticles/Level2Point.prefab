@@ -155,8 +155,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1108949904790598}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.178543, y: -6.2198296, z: -2.4012604}
-  m_LocalScale: {x: 1.3332611, y: 1.3332604, z: 1.3332614}
+  m_LocalPosition: {x: 84.551254, y: 0.21267319, z: 179.34023}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4766762935207142}
   - {fileID: 4244360744384238}
@@ -517,8 +517,8 @@ MonoBehaviour:
   particleChildren: []
   Emission: {fileID: 4147485060777662}
   Parent: {fileID: 1108949904790598}
-  Shoot: {fileID: 82921155087927190}
-  point: 20
+  Shot: {fileID: 82921155087927190}
+  point: 0
 --- !u!114 &114350638546852558
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,6 +10,6 @@ public class ParticleMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.Translate(new Vector3(0,0.006f,0.005f));
+		this.transform.Translate(new Vector3(0,0.006f,0));
 	}
 }

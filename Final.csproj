@@ -90,6 +90,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GalaxyBox1\examplescene.cs" />
     <Compile Include="Assets\PowerUp\Scripts\CustomizablePowerUp.cs" />
     <Compile Include="Assets\PowerUp\Scripts\PowerUpManager.cs" />
     <Compile Include="Assets\PowerUp\Scripts\PowerUpRotation.cs" />
@@ -98,11 +99,15 @@
     <Compile Include="Assets\PowerUp\Scripts\Utility\Singleton.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\ArrowManager.cs" />
+    <Compile Include="Assets\Scripts\BarrelActivated.cs" />
     <Compile Include="Assets\Scripts\BarrelManager.cs" />
     <Compile Include="Assets\Scripts\CastleHealth.cs" />
+    <Compile Include="Assets\Scripts\HealthBarManager.cs" />
     <Compile Include="Assets\Scripts\HealthParticle.cs" />
+    <Compile Include="Assets\Scripts\MenuArrowManager.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\ParticleMovement.cs" />
+    <Compile Include="Assets\Scripts\PointBarManager.cs" />
     <Compile Include="Assets\Scripts\PointManager.cs" />
     <Compile Include="Assets\Scripts\PointParticle.cs" />
     <Compile Include="Assets\Scripts\StaffManager.cs" />
@@ -244,6 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="Assets\GalaxyBox1\instructions.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
