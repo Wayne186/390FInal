@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CastleHealth : MonoBehaviour {
+	public AudioSource end;
+	public AudioClip lose;
+	public AudioClip win;
+	public AudioClip start;
+	public static int isEnded;
+	private static float MaxHealth;
+	public static float currentHealthLevel;
+	public static HealthManager myHealth;
+
 
 	public class HealthManager{
 		public float CurrentHealth;
@@ -10,21 +19,30 @@ public class CastleHealth : MonoBehaviour {
 			CurrentHealth = health;
 		}
 	}
-
-	private static float MaxHealth;
-	public static HealthManager myHealth;
-
+		
 	// Use this for initialization
 	void Start () {
-		MaxHealth = 360f;
+		isEnded = 0;
+		MaxHealth = 100f;
+		currentHealthLevel = MaxHealth;
 		myHealth = new HealthManager(MaxHealth);
+		end.Play();
 	}
-	
+		
+
 	// Update is called once per frame
 	void Update () {
-		/*if (Input.GetKeyDown (KeyCode.K)) {
-			DealDamage (2);
-		}*/
+		if (myHealth.CurrentHealth <= 0 && isEnded == 0) {
+			GameOver ();
+		} else if (isEnded == 1) {
+			playWiningMusic ();
+		}
+	}
+
+	private void playWiningMusic(){
+		isEnded = 2;
+		end.clip = win;
+		end.Play ();
 	}
 
 	private IEnumerator timer(){
@@ -33,9 +51,6 @@ public class CastleHealth : MonoBehaviour {
 
 	public static void DealDamage(float damageValue){
 		myHealth.CurrentHealth -= damageValue;
-		if (myHealth.CurrentHealth <= 0) {
-			GameOver ();
-		}
 		Debug.Log ("Losing Health: " + myHealth.CurrentHealth);
 	}
 
@@ -45,10 +60,15 @@ public class CastleHealth : MonoBehaviour {
 	}
 
 	public static float CalculateHealth(){
+		currentHealthLevel = myHealth.CurrentHealth;
 		return myHealth.CurrentHealth / MaxHealth;
 	}
-	private static void GameOver(){
-		myHealth.CurrentHealth = 0;
+
+	private void GameOver(){
+		isEnded = 2;
+		end.clip = lose;
+		end.Play ();
 		Debug.Log ("Suohi Legion Took Over the Castle....You're now a SUOHI FOOTMAN.");
 	}
+		
 }

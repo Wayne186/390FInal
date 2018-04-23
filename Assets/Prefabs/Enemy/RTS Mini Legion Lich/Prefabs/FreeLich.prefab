@@ -1185,7 +1185,7 @@ MonoBehaviour:
   particle: {fileID: 1108949904790598, guid: accd420eccdd1fc469cd20eb54286372, type: 2}
   Levels: {fileID: 82941005050512654}
   start: {fileID: 8300000, guid: 277a2c9ed9dbca7428bb7a8173002ff4, type: 3}
-  hit: {fileID: 8300000, guid: ff467d5f9813e5344bcd59eb07c751a9, type: 3}
+  hit: {fileID: 8300000, guid: 521fdb1f3aba04d4183c968383473f04, type: 3}
   killed: {fileID: 8300000, guid: e6a9ad207a9f45c4da076b9d97692ecc, type: 3}
 --- !u!114 &114358902458756252
 MonoBehaviour:

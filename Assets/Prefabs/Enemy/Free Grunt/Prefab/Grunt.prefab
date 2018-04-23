@@ -1283,7 +1283,7 @@ MonoBehaviour:
   particle: {fileID: 1266941292734806, guid: d20819c423bdceb4a810775afbad6ac4, type: 2}
   Levels: {fileID: 82293350522888916}
   start: {fileID: 8300000, guid: 371ffb5f435b23642b3c9a930ccdf634, type: 3}
-  hit: {fileID: 8300000, guid: bb9772e351d9b434da117e67cc5b58fd, type: 3}
+  hit: {fileID: 8300000, guid: 29bb382fd00d3d746becd1c8b0733972, type: 3}
   killed: {fileID: 8300000, guid: acd87ea5e1e1c9a4ba71f38499fd6a1f, type: 3}
 --- !u!114 &114328814207277848
 MonoBehaviour:

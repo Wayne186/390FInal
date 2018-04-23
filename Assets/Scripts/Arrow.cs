@@ -44,11 +44,11 @@ public class Arrow : MonoBehaviour {
 	}
 
 	private void AttachArrow() {
-		var device = SteamVR_Controller.Input((int)ArrowManager.Instance.trackedObj.index);
+	/*	var device = SteamVR_Controller.Input((int)ArrowManager.Instance.trackedObj.index);
 		if (!isAttached && device.GetTouch (SteamVR_Controller.ButtonMask.Trigger)) {
 			ArrowManager.Instance.AttachBowToArrow ();
 			isAttached = true;
-		}
+		}*/
 	}
 
 

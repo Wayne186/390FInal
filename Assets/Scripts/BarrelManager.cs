@@ -44,7 +44,6 @@ public class BarrelManager : MonoBehaviour {
 		}
 		yield return new WaitForSeconds (1);
 		explosionLauncher.Stop ();
-		//Debug.Log (Parent.name);
 		if (Parent.name == "BarrelTrap 1") {
 			Barrel1Activated.Activated (BarrelActivator);
 		}else if (Parent.name == "BarrelTrap 2") {

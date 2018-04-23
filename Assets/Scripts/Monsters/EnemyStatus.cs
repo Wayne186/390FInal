@@ -23,12 +23,16 @@ public class EnemyStatus : MonoBehaviour
 	public AudioClip start;
 	public AudioClip hit;
 	public AudioClip killed;
+	bool isEnded;
 
 
 	public void Start()
 	{
 		//this.dir = new Vector3(-1,0,0);
-		Levels.Play();
+		isEnded =  true;
+		if (CastleHealth.currentHealthLevel > 0) { 
+			Levels.Play ();
+		}
 		anim = GetComponent<Animator>();
 		dead = false;
 		currentHealth = maxHealth;
@@ -46,10 +50,9 @@ public class EnemyStatus : MonoBehaviour
 		{
 			Levels.clip = killed;
 			Levels.Play ();
-			Debug.LogError (this.gameObject.transform.position);
 			dead = true;
 			anim.SetTrigger ("isDead");
-			Debug.Log ("Take Damage!!" + amount);
+			//Debug.Log ("Take Damage!!" + amount);
 			Destroy (agent);
 			currentHealth = 0;
 			currentParticle = Instantiate(particle);
@@ -73,7 +76,7 @@ public class EnemyStatus : MonoBehaviour
 	}
 
 	void doDamage () {
-		if (dead != true) {
+		if (dead != true && isEnded == true) {
 			Levels.Play ();
 			CastleHealth.DealDamage (damage);
 		}
@@ -81,5 +84,10 @@ public class EnemyStatus : MonoBehaviour
 		
 	public void Update()
 	{
+		if (CastleHealth.currentHealthLevel  <= 0 && isEnded == true) {
+			Levels.Stop ();
+			isEnded = false;
+			Destroy (agent);
+		}
 	}
 }

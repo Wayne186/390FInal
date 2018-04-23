@@ -13,7 +13,6 @@ public class LevelManager : MonoSingleton<LevelManager> {
 	public GameObject Canvas;
 
 	public bool canBuild = false;
-
 	private bool spawnActive = false;
 	private bool waveActive = false;
 
@@ -33,10 +32,6 @@ public class LevelManager : MonoSingleton<LevelManager> {
 
 	private void Start()
 	{
-		// Setup UI
-		//UIManager.Instance.DrawWaveInfo();
-		//UIManager.Instance.DrawResourceInfo();
-		//InvokeRepeating("UpdateClock", 0f, 1f);
 	}
 
 	// Update is called once per frame
@@ -70,13 +65,11 @@ public class LevelManager : MonoSingleton<LevelManager> {
 			waveRemainingTime = waves[0].events[0].waveDuration;
 		}
 		currentWave++;
-		//UIManager.Instance.InfoText.text = "Wave Starting!";
 		Debug.Log("Wave Starting");
 		waves[0].StartWave();
 		spawnActive = true;
 		waveActive = true;
 
-		//UIManager.Instance.DrawWaveInfo();
 	}
 
 	public void EndWave()

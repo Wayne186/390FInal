@@ -22,7 +22,6 @@ public class HealthParticle : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//haha ();
 	}
 
 	void OnTriggerEnter(Collider collider){
@@ -32,9 +31,6 @@ public class HealthParticle : MonoBehaviour {
 		} else {
 			StartCoroutine (timer ());
 		}
-	}
-	void haha(){
-		StartCoroutine (timer ());
 	}
 
 	private IEnumerator timer(){
