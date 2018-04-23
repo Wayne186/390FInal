@@ -12,6 +12,7 @@ public class BackManager : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.tag == "Arrow") {
 			Debug.Log ("entering back.....");
+			button.Play ();
 			StartCoroutine (timer ());
 			backButton.onClick.Invoke ();
 		} 
@@ -19,7 +20,6 @@ public class BackManager : MonoBehaviour {
 
 	private IEnumerator timer(){
 		yield return new WaitForSeconds (0.5f);
-		button.Play ();
 		mainMenu.SetActive (true);
 		backCollider.SetActive (false);
 	}

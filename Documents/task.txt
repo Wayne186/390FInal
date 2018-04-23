@@ -1,0 +1,15 @@
+???wave??:set CastleHealth.isEnded = true;
+
+??wave????,??castlehealdht.isended = true
+
+
+
+Thunder arrow: Auto redeem after 150 points, equiavlent to 10 regular kills.
+Barrel: Create damage to all object in its range
+Point Particles: emits after enemy been killed
+Health Particles: help healing the castle
+Level1: 2 regular kills, 1 headshot
+Level2: 3 regular kills, 1 headshot
+Level3: 4 regular kills, 2 headshots
+Level4: 15 regular kills, 4 headshots
+

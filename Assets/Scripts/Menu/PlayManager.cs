@@ -11,6 +11,7 @@ public class PlayManager : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.tag == "Arrow") {
 			Debug.Log ("entering play.....");
+			button.Play ();
 			StartCoroutine (timer ());
 			playButton.onClick.Invoke ();
 		} 
@@ -18,7 +19,6 @@ public class PlayManager : MonoBehaviour {
 
 	private IEnumerator timer(){
 		yield return new WaitForSeconds (0.5f);
-		button.Play ();
 		mainMenu.SetActive (false);
 	}
 }

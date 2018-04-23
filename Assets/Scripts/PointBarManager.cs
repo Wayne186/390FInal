@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PointBarManager : MonoBehaviour {
 	public Slider PointBar;
 	public AudioSource levelup;
+	public Text records;
 	private int up;
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,7 @@ public class PointBarManager : MonoBehaviour {
 			levelup.Play ();
 			PointManager.LostPoints (150f);
 		}
+		records.text = "Points: " + PointManager.myCurrentPoint + "/150";
 		PointBar.value = PointManager.CalculatePoint();
 	}
 }

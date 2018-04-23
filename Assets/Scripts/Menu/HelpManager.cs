@@ -12,6 +12,7 @@ public class HelpManager  : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.tag == "Arrow") {
 			Debug.Log ("entering help.....");
+			button.Play ();
 			StartCoroutine (timer ());
 			helpButton.onClick.Invoke ();
 		} 
@@ -19,7 +20,6 @@ public class HelpManager  : MonoBehaviour {
 
 	private IEnumerator timer(){
 		yield return new WaitForSeconds (0.5f);
-		button.Play ();
 		mainMenu.SetActive (false);
 		backCollider.SetActive (true);
 	}

@@ -11,6 +11,7 @@ public class QuitManager  : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.tag == "Arrow") {
 			Debug.Log ("entering quit.....");
+			button.Play ();
 			StartCoroutine (timer ());
 			quitButton.onClick.Invoke ();
 		} 
@@ -18,7 +19,6 @@ public class QuitManager  : MonoBehaviour {
 
 	private IEnumerator timer(){
 		yield return new WaitForSeconds (0.5f);
-		button.Play ();
 		mainMenu.SetActive (false);
 	}
 }

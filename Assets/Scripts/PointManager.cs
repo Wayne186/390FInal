@@ -13,6 +13,7 @@ public class PointManager : MonoBehaviour {
 
 	private static float MaxPoint;
 	public static CurrentPointManager myPoint;
+	public static float myCurrentPoint;
 
 	void Start(){
 		MaxPoint = 500f;
@@ -25,10 +26,12 @@ public class PointManager : MonoBehaviour {
 
 	public static void GainPoints(float gainValue){
 		myPoint.CurrentPoint += gainValue;
+		myCurrentPoint = myPoint.CurrentPoint;
 	}
 
 	public static void LostPoints(float lostValue){
 		myPoint.CurrentPoint -= lostValue;
+		myCurrentPoint = myPoint.CurrentPoint;
 	}
 
 	public static float CalculatePoint(){

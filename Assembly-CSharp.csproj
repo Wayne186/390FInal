@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Barrel2Activated.cs" />
      <Compile Include="Assets\Scripts\BarrelActivated.cs" />
      <Compile Include="Assets\Scripts\BarrelManager.cs" />
+     <Compile Include="Assets\Scripts\Bars.cs" />
      <Compile Include="Assets\Scripts\CastleHealth.cs" />
      <Compile Include="Assets\Scripts\HealthBarManager.cs" />
      <Compile Include="Assets\Scripts\HealthParticle.cs" />
@@ -72,6 +73,7 @@
      <Compile Include="Assets\Scripts\Managers\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
      <Compile Include="Assets\Scripts\Menu\BackManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\DirectionalManager.cs" />
      <Compile Include="Assets\Scripts\Menu\HelpManager.cs" />
      <Compile Include="Assets\Scripts\Menu\PlayManager.cs" />
      <Compile Include="Assets\Scripts\Menu\QuitManager.cs" />
